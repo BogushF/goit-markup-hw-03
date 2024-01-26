@@ -2,19 +2,74 @@ body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #fff;
+  width: 100%;
+  max-width: 1440px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
 }
 
 a:hover,
 a:focus {
   color: #404bbf;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
 }
 
 .header-logo {
@@ -25,6 +80,7 @@ a:focus {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-right: 76px;
 }
 
 .header-logo-accent {
@@ -37,16 +93,29 @@ a:focus {
   text-transform: uppercase;
 }
 
+.header-menu-list {
+  display: flex;
+  gap: 40px;
+}
+
 .header-menu-link {
   color: #2e2f42;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  display: block;
+  padding: 24px 0;
 }
 
 .contacts {
   font-style: normal;
+  margin-left: auto;
+}
+
+.contacts-list {
+  display: flex;
+  gap: 40px;
 }
 
 .contacts-link {
@@ -59,19 +128,24 @@ a:focus {
 
 .slogan {
   background-color: #2e2f42;
+  text-align: center;
 }
 
 .slogan-title {
   color: #fff;
-  text-align: center;
   font-size: 56px;
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 0.02em;
+  max-width: 496px;
+  padding-top: 188px;
+  margin-right: auto;
+  margin-bottom: 48px;
+  margin-left: auto;
 }
 
 .slogan-button {
-  background: #4d5ae5;
+  background-color: #4d5ae5;
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -79,6 +153,14 @@ a:focus {
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+  display: inline-flex;
+  padding: 16px 32px;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 188px;
 }
 
 .slogan-button:hover,
@@ -86,15 +168,38 @@ a:focus {
   background-color: #404bbf;
 }
 
-.feature-title {
-  color: #2e2f42;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  text-align: center;
+.feature {
+  background-color: #fff;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.feature-list {
+  display: flex;
+  gap: 24px;
+}
+
+.feature-list-item {
+  flex-basis: calc((100%-72px) / 4);
+}
+
+.feature-box {
+  display: flex;
+  width: 264px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .feature-list-title {
@@ -114,10 +219,28 @@ a:focus {
 
 .team {
   background: #f4f4fd;
+  padding-top: 0;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .team-list-item {
   background-color: #fff;
+  flex-basis: calc((100%-72px) / 4);
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .team-title {
@@ -128,6 +251,8 @@ a:focus {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  padding-top: 120px;
+  margin-bottom: 72px;
 }
 
 .team-img-title {
@@ -145,6 +270,38 @@ a:focus {
   letter-spacing: 0.02em;
 }
 
+.case {
+  padding-top: 120px;
+}
+
+.case-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+  flex-basis: calc((100%-72px) / 4);
+}
+
+.case-list-item {
+  background-color: #fff;
+  flex-basis: calc((100%-48px) / 3);
+}
+
+.case-card {
+  display: flex;
+  padding: 0px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  /*margin-top: 32px;
+  margin-bottom: 32px;*/
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border: 1px solid #e7e9fc;
+}
+
 .case-title {
   color: #2e2f42;
   text-align: center;
@@ -153,6 +310,7 @@ a:focus {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 
 .case-img-title {
@@ -172,6 +330,15 @@ a:focus {
 
 .footer {
   background-color: #2e2f42;
+}
+
+.footer-box {
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .footer-logo {
@@ -196,6 +363,7 @@ a:focus {
 }
 
 .footer-text {
+  width: 264px;
   color: #f4f4fd;
   font-size: 16px;
   line-height: 1.5;
