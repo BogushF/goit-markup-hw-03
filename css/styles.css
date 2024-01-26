@@ -129,6 +129,8 @@ a:focus {
 .slogan {
   background-color: #2e2f42;
   text-align: center;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .slogan-title {
@@ -138,7 +140,6 @@ a:focus {
   line-height: 1.07;
   letter-spacing: 0.02em;
   max-width: 496px;
-  padding-top: 188px;
   margin-right: auto;
   margin-bottom: 48px;
   margin-left: auto;
@@ -156,11 +157,14 @@ a:focus {
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
-  display: inline-flex;
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
   padding: 16px 32px;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 188px;
+  marginp-bottom: 188px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slogan-button:hover,
@@ -191,16 +195,19 @@ a:focus {
 }
 
 .feature-list-item {
+  display: flex;
+  width: 264px;
+  flex-direction: column;
+  align-items: flex-start;
   flex-basis: calc((100%-72px) / 4);
 }
-
+/*
 .feature-box {
   display: flex;
   width: 264px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
-}
+}*/
 
 .feature-list-title {
   color: #2e2f42;
@@ -208,6 +215,7 @@ a:focus {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
 .feature-list-text {
@@ -219,7 +227,8 @@ a:focus {
 
 .team {
   background: #f4f4fd;
-  padding-top: 0;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .team-list {
@@ -231,14 +240,13 @@ a:focus {
 .team-list-item {
   background-color: #fff;
   flex-basis: calc((100%-72px) / 4);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 8px;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -251,7 +259,6 @@ a:focus {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  padding-top: 120px;
   margin-bottom: 72px;
 }
 
@@ -261,6 +268,8 @@ a:focus {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .team-img-text {
@@ -268,6 +277,7 @@ a:focus {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 
 .case {
@@ -279,7 +289,6 @@ a:focus {
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
-  flex-basis: calc((100%-72px) / 4);
 }
 
 .case-list-item {
@@ -293,13 +302,11 @@ a:focus {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 8px;
   align-self: stretch;
-  /*margin-top: 32px;
-  margin-bottom: 32px;*/
   padding-top: 32px;
   padding-bottom: 32px;
   border: 1px solid #e7e9fc;
+  border-top: none;
 }
 
 .case-title {
@@ -319,6 +326,7 @@ a:focus {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
 .case-img-text {
@@ -330,15 +338,14 @@ a:focus {
 
 .footer {
   background-color: #2e2f42;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .footer-box {
   display: flex;
-  padding-top: 100px;
-  padding-bottom: 100px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
 }
 
 .footer-logo {
@@ -350,6 +357,8 @@ a:focus {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .footer-logo-accent {
