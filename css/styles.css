@@ -2,8 +2,6 @@ body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #fff;
-  width: 100%;
-  max-width: 1440px;
 }
 
 *,
@@ -195,19 +193,9 @@ a:focus {
 }
 
 .feature-list-item {
-  display: flex;
   width: 264px;
-  flex-direction: column;
-  align-items: flex-start;
   flex-basis: calc((100%-72px) / 4);
 }
-/*
-.feature-box {
-  display: flex;
-  width: 264px;
-  flex-direction: column;
-  align-items: flex-start;
-}*/
 
 .feature-list-title {
   color: #2e2f42;
@@ -244,9 +232,6 @@ a:focus {
 }
 
 .team-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -297,12 +282,7 @@ a:focus {
 }
 
 .case-card {
-  display: flex;
   padding: 0px 16px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  align-self: stretch;
   padding-top: 32px;
   padding-bottom: 32px;
   border: 1px solid #e7e9fc;
